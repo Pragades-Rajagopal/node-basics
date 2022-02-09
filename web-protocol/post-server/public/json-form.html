@@ -1,0 +1,27 @@
+<form method="POST">
+	<label for="firstname">Firstname:</label>
+	<input type="text" id="first" name="firstname">
+	<label for="lastname">Lastname:</label>
+	<input type="text" id="last" name="lastname">
+	<input type="submit" value="Submit">
+</form>
+<script>
+	document.forms[0].addEventListener("submit", (event) => {
+		event.preventDefault();
+		let data = {
+			firstname: document.getElementById('first').value,
+			lastname: document.getElementById('last').value,
+		};
+		console.log("Data at src tag ", data);
+		fetch ("http://localhost:3000", {
+			method: "post",
+			header: {
+				"Content-Type" : "application/json",
+			},
+			body: JSON.stringify(data),
+		}).then(function (response) {
+			console.log(response);
+			return response.json();
+		});
+	});
+</script>

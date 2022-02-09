@@ -10,7 +10,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.1",
     "express": "^4.17.2",
-    "ndjson": "^2.0.0"
+    "formidable": "^2.0.1",
+    "moment": "^2.29.1",
+    "ndjson": "^2.0.0",
+    "ws": "^8.5.0"
   }
 }
