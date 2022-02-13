@@ -1,0 +1,15 @@
+<html>
+	<head>
+		<title>Express app</title>
+	</head>
+	<body>
+		<h1>Express Application</h1>
+		<p>Welcome to the homepage</p>
+		<% if (user) { %>
+		<p>Hello <%= user %>!</p>
+		<p><a href="/logout">Logout</a></p>
+		<% } else { %>
+		<p><a href="/login">Login</a></p>
+		<% } %>
+	</body>
+</html>

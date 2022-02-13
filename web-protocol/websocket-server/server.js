@@ -6,7 +6,8 @@ const Server = new WebSocket.Server({
 
 Server.on("connection", (socket) => {
 	socket.on("message", (msg) => {
-		console.log("Received: ", msg);
-		if (msg === "Hello") socket.send("World!");
+		value = msg.toString();
+		console.log("Received: ", value);
+		if (value === "Hello") socket.send("World!");
 	});
 });
